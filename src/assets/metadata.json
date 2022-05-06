@@ -1,0 +1,161 @@
+{
+  "controls": [
+    {
+      "name": "firstName",
+      "label": "First name",
+      "value": "i'm kiran from hyd",
+      "type": "text",
+      "disabled": true,
+      "validations": {
+        "required": true,
+        "minLength": 10
+      }
+    },
+    {
+      "name": "lastName",
+      "label": "Last name",
+      "value": "",
+      "type": "text",
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "name": "age",
+      "label": "Age",
+      "value": 10,
+      "type": "range",
+      "range": {
+        "min": 10,
+        "max": 50,
+        "step": 10
+      }
+    },
+    {
+      "name": "comments",
+      "label": "Comments",
+      "value": "",
+      "type": "textarea",
+      "validations": {}
+    },
+    {
+      "name": "agreeTerms",
+      "label": "This is a checkbox?",
+      "value": false,
+      "type": "checkbox",
+      "validations": {}
+    },
+    {
+      "name": "days",
+      "label": "days",
+      "type": "checkbox",
+      "options": [
+        {
+          "label": "sunday",
+          "name": "sunday",
+          "value": false,
+          "disabled": true
+        },
+        {
+          "label": "monday",
+          "name": "monday",
+          "value": false
+        },
+        {
+          "label": "tuesday",
+          "name": "tuesday",
+          "value": false
+        },
+        {
+          "label": "wednesday",
+          "name": "wednesday",
+          "value": false
+        },
+        {
+          "label": "thursday",
+          "name": "thursday",
+          "value": false
+        },
+        {
+          "label": "friday",
+          "name": "friday",
+          "value": false
+        },
+        {
+          "label": "saturday",
+          "name": "saturday",
+          "value": false
+        }
+      ],
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "name": "gender",
+      "label": "Gender",
+      "type": "radio",
+      "options": [
+        {
+          "label": "Male",
+          "value": "M"
+        },
+        {
+          "label": "Female",
+          "value": "F"
+        }
+      ]
+    },
+    {
+      "name": "martialStatus",
+      "label": "Martial status",
+      "type": "radio",
+      "options": [
+        {
+          "label": "Single",
+          "value": "S"
+        },
+        {
+          "label": "Married",
+          "value": "NS"
+        }
+      ]
+    },
+    {
+      "name": "spouseName",
+      "label": "Spouse name",
+      "type": "text",
+      "validations": {
+        "required": {
+          "expression": "model.martialStatus === 'NS'"
+        }
+      }
+    },
+    {
+      "name": "country",
+      "label": "Countries",
+      "type": "select",
+      "value": "UK",
+      "options": [
+        {
+          "label": "select",
+          "value": ""
+        },
+        {
+          "label": "India",
+          "value": "IN"
+        },
+        {
+          "label": "United Kingdom",
+          "value": "UK"
+        }
+      ]
+    },
+    {
+      "name": "date",
+      "label": "date",
+      "type": "date",
+      "value": ""
+    }
+  ]
+}

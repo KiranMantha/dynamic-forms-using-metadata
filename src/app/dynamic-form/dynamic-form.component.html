@@ -1,0 +1,32 @@
+<ng-container *ngIf="controls">
+  <form [formGroup]="form" (submit)="submitForm()">
+    <table>
+      <tbody>
+        <tr *ngFor="let control of controls">
+          <td>{{ control.label }}</td>
+          <td>
+            <app-dynamic-form-field
+              [form]="form"
+              [control]="control"
+              [isFormSubmitted]="isFormSubmitted"
+            ></app-dynamic-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button type="submit">submit</button>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">
+            <pre>
+              {{ form.value | json }}
+            </pre>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </form>
+</ng-container>
